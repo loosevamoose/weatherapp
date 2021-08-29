@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+  padding: 20px 40px 10px;
+}
+
+img.day0 {
+  width: 200px;
+  margin: 0 auto;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li.day,
+li.temp {
+  font-weight: bold;
+  line-height: 1;
+}
+li.weatherDescription {
+  font-size: smaller;
+  line-height: 2;
+  font-style: italic;
+}
+#dayZeroDescription {
+  font-style: italic;
+  font-size: 20px;
+}
+
+img.dayOne,
+img.dayTwo,
+img.dayThree,
+img.dayFour,
+img.dayFive {
+  opacity: 100%;
+}
+a {
+  color: #fd7892;
+}
+
+.attribution {
+  font-size: 10px;
+  text-align: right;
+}

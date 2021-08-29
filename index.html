@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" style="width: 40rem">
+        <h1 class="card-title">
+          Weather in <span id="currentCity">Los Angeles, CA</span>
+        </h1>
+        <div class="row">
+          <div class="col-7">
+            <div class="card m-2 p-1 border-light">
+              <form id="formSearchCity">
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Search for a city"
+                      id="searchCityInput"
+                    />
+                  </div>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="submit" class="btn btn-outline-dark my-2">
+                    Search
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark my-2"
+                    id="currentButton"
+                  >
+                    Current
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-5">
+            <h6>5-day Forecast</h6>
+            <div class="row futureWeather">
+              <div class="col-5">
+                <img src="images/cloudy day.png" class="img-fluid dayOne" />
+              </div>
+              <div class="col-7">
+                <ul class="dayOne my-3">
+                  <li class="day">Sunday</li>
+                  <li class="temp">83°F / 67°F</li>
+                  <li class="weatherDescription">Partly Cloudy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7 day0">
+            <div class="card text-center border-light m-3 g-4">
+              <h3 class="card-title" id="currentTime">Saturday, 10:45AM</h3>
+              <h4 class="card-subtitle">
+                <span id="dayZeroTemp"> </span>
+                <a href="#" id="dayZeroC">°C </a>
+                <a href="#" id="dayZeroF"> </a>
+              </h4>
+              <img src="images/sun.png" class="img-fluid day0" />
+              <p class="card-text">
+                <span id="dayZeroDescription"></span>
+                <br />Humidity: <span id="dayZeroHumidity"> % </span>
+                <br />Wind: <span id="dayZeroWind">km/h </span>
+              </p>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="row futureWeather">
+              <div class="col-5">
+                <img src="images/sun.png" class="img-fluid dayTwo" />
+              </div>
+              <div class="col-7">
+                <ul class="dayFour my-3">
+                  <li class="day">Monday</li>
+                  <li class="temp">85°F / 68°F</li>
+                  <li class="weatherDescription">Sunny</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row futureWeather">
+              <div class="col-5">
+                <img src="images/clouds.png" class="img-fluid dayThree" />
+              </div>
+              <div class="col-7">
+                <ul class="dayFour my-3">
+                  <li class="day">Tuesday</li>
+                  <li class="temp">87°F / 67°F</li>
+                  <li class="weatherDescription">Cloudy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row futureWeather">
+              <div class="col-5">
+                <img src="images/cloudy day.png" class="img-fluid dayFour" />
+              </div>
+              <div class="col-7">
+                <ul class="dayFour my-3">
+                  <li class="day">Wednesday</li>
+                  <li class="temp">87°F / 68°F</li>
+                  <li class="weatherDescription">Partly Cloudy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row futureWeather">
+              <div class="col-5">
+                <img src="images/clouds.png" class="img-fluid dayFive" />
+              </div>
+              <div class="col-7">
+                <ul class="dayFive my-3">
+                  <li class="day">Thursday</li>
+                  <li class="temp">86°F / 66°F</li>
+                  <li class="weatherDescription">Cloudy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="attribution">
+          Icons made by
+          <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware"
+            >Good Ware</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
